@@ -49,23 +49,23 @@ function UserDetails() {
         </h1> */}
         {editName ? (
           <form className="edit-wrapper" onSubmit={handleSubmit}>
-            <p>Edit user info</p>
+            <p className="edit-title-texte-user-new">Edit user info</p>
             <div className="edit-form-inputs">
-              <label htmlFor="input-label">Username</label>
+              <label htmlFor="input-label">Username:</label>
               <input
                 type="text"
                 label="User Name :"
                 value={userName}
                 onChange={handleUserNameChange}
               />
-              <label htmlFor="input-label">First name</label>{" "}
+              <label htmlFor="input-label">First name:</label>{" "}
               <input
                 type="text"
                 label="First Name :"
                 value={user.firstName}
                 disabled
               />
-              <label htmlFor="input-label">Last Name</label>{" "}
+              <label htmlFor="input-label">Last Name:</label>{" "}
               <input
                 type="text"
                 label="Last Name :"

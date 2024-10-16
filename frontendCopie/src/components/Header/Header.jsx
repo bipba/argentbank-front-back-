@@ -4,7 +4,7 @@ import { logout } from "../../store/Actions/UserAction";
 
 import logo from '../../assets/argentBankLogo.webp';
 import IconUser from "../../assets/icon-user.webp";
-import IconLogOut from "../../assets/icon-logout.webp";
+// import IconLogOut from "../../assets/icon-logout.webp";
 
 const Header = () => {
     const selectToken = (state) => state.token.token;
@@ -35,16 +35,23 @@ const Header = () => {
                 {token ? (
                     <div className="main-nav-link">
                         <NavLink to="/user" className="user-profile">
-                            {userName}
+                       <span className="user-position">  {userName}</span>
                             <img src={IconUser}
                                 alt="Icon User"
                                 className="sign-in-icon" />{" "}
                         </NavLink>
+                        <NavLink to="#" className="main-nav-item">
+            <i className="fa fa-gear"></i>
+          </NavLink>
+
                         <div onClick={logoutUser} className="logout main-nav-link">
-                            <img src={IconLogOut}
+                        <i className="fa-solid fa-power-off"></i>
+                            
+                            
+                            {/* <img src={IconLogOut}
                                 alt="icon-logout"
-                                className="icon-logout" />
-                            Sign Out
+                                className="icon-logout" /> */}
+                            {/* Sign Outs */}
                         </div>
                     </div>
                 ) : (
