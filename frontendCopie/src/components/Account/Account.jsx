@@ -9,14 +9,14 @@ function Account({ title, amount, description }) {
                 <p className="account-amount-description">{description}</p>
             </div>
             <div className="account-content-wrapper cta">
-                <button className="transaction-button">
+             
                
-                    <img 
+                    <img className="arrow-right"
                         src={arrow}  // Utilise la bonne syntaxe pour passer la source de l'image
                         alt="Right Arrow" 
-                        className="button-arrow"
+                        
                     />
-                </button>
+               
             </div>
         </section>
     );
